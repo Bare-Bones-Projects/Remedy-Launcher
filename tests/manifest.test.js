@@ -1,0 +1,10 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {selectPlatform,releasesEndpoint}=require('../src/manifest');
+test('windows package target',()=>assert.equal(selectPlatform('win32','x64').os,'windows'));
+test('linux package target',()=>assert.ok(selectPlatform('linux','x64').extensions.includes('.deb')));
+test('macOS package target',()=>assert.equal(selectPlatform('darwin','arm64').arch,'arm64'));
+test('reject unknown architecture',()=>assert.throws(()=>selectPlatform('linux','mips')));
+test('allowlisted repository endpoint',()=>assert.match(releasesEndpoint(),/Tuna-Browser\/releases$/));
+test('reject arbitrary repo',()=>assert.throws(()=>releasesEndpoint('attacker/repo')));
