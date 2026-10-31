@@ -1,6 +1,6 @@
 'use strict';
-const BROWSER_REPO='Bare-Bones-Projects/Tuna-Browser';
-const LAUNCHER_REPO='Bare-Bones-Projects/Remedy-Launcher';
+const BROWSER_REPO='BareBones-Projects/Tuna-Browser';
+const LAUNCHER_REPO='BareBones-Projects/Remedy-Launcher';
 const API_BASE='https://api.github.com/repos/';
 function selectPlatform(platform=process.platform,arch=process.arch){
   if(!['x64','arm64'].includes(arch)) throw new Error('Unsupported architecture');
