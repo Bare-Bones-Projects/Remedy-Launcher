@@ -1,6 +1,6 @@
 # Remedy Launcher // Alpha CLI
 
-Companion to [Tuna Browser](https://github.com/Bare-Bones-Projects/Tuna-Browser).
+Companion to [Tuna Browser](https://github.com/BareBones-Projects/Tuna-Browser).
 
 This repository now contains an **initial executable Node.js CLI**, with read-only release URL discovery and platform identification. It is not yet a GUI installer, updater, or package manager.
 
